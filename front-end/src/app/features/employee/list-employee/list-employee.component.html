@@ -1,0 +1,52 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <span> Employee List</span>
+      <span style="float: right;"><i class="fa fa-user-plus hover-pointer"
+          (click)="navigate(NAVIGATE_CONSTANTS.ADD_USER)"></i></span>
+    </div>
+    <div class="card-body">
+      <div class="container">
+        <table class="table table-sm">
+          <thead>
+            <tr style="text-align: center;">
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Role</th>
+              <th scope="col">Action</th>
+              <!-- <th scope="col"></th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let currentEmployee of allEmployeeList" style="text-align: center;">
+              <td>{{ currentEmployee?.name }}</td>
+              <td>{{ currentEmployee?.email }}</td>
+              <td>{{ currentEmployee?.gender }}</td>
+              <td>
+                <div class="row" style="width: 100%; margin-left: 0px;">
+                  <app-chips [label]="getRoleString(currentEmployee)" [style]="getRoleWiseStyle(currentEmployee)">
+                  </app-chips>
+                </div>
+              </td>
+              <td>
+                <div class="row" style="display: inline;">
+                  <span><i class="fa fa-edit hover-pointer"
+                      (click)="navigate(NAVIGATE_CONSTANTS.EDIT_USER, currentEmployee)"></i></span>
+                  <label class="switch">
+                    <input type="checkbox" [checked]="currentEmployee.isActive"
+                      (change)="toggleActiveInActive(currentEmployee)">
+                    <span class="slider round"></span>
+                  </label>
+                  <span data-toggle="tooltip" title="Add Performance Review"><i class="fa fa-comment hover-pointer"
+                      (click)="navigate(NAVIGATE_CONSTANTS.ADD_PERFORMANCE_REVIEW, currentEmployee)"></i></span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <div class="row login-form-pos box-shadow ">
+        <h2 class="text-center">Sign in</h2>
+        <div class="form-group padding-top-15">
+          <input type="email" class="form-control" id="email" placeholder="Type your Email" name="email" [(ngModel)]="loginDetails.email">
+          <span class="error-msg" *ngIf="isFormSubmitted && !loginDetails?.email">Email is required</span>
+        </div>
+        <div class="form-group padding-top-15">
+          <input type="password" class="form-control" id="pwd" placeholder="Type your Password" name="pwd" [(ngModel)]="loginDetails.password">
+          <span class="error-msg" *ngIf="isFormSubmitted && !loginDetails?.password">Password is required</span>
+        </div>
+        <div class="form-group padding-top-15">
+          <a class="forgot-password" *ngIf="isFormSubmitted && !loginDetails?.password">Forgot Password?</a>
+        </div>
+        <div class="padding-top-15">
+          <button type="button" class="button" [disabled]="!loginDetails?.email || !loginDetails?.password"
+          (click)="login()"
+          ><span
+              class="submit-button-text">SIGN IN</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+</div>

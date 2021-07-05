@@ -1,0 +1,15 @@
+.chips-div {
+  width: auto;
+    border-radius: 6px;
+    background-color: #eceff1;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: arial;
+    box-shadow: 2px 2px 2px #becabe;
+    height: 26px;
+    transition: all 0.3s linear;
+    text-align: center;
+}
+.chips-div:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}

@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isUserLoggedIn">
+  <a class="navbar-brand" href="#">PayPay</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown" style="flex-direction: row-reverse; padding-right: 10px;">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: transparent; border: none;">
+        <span>{{sharedService?.loggedInUserInformation?.name}}</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu1" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

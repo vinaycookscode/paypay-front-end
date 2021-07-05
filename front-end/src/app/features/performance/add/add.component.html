@@ -1,0 +1,150 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Add Performance
+    </div>
+    <div class="card-body">
+      <form [formGroup]="perforamanceForm">
+        <table class="table table-sm">
+          <thead>
+            <tr style="text-align: center;">
+              <th scope="col">Factor</th>
+              <th scope="col">Unsatisfactory</th>
+              <th scope="col">Satisfactory</th>
+              <th scope="col">Good</th>
+              <th scope="col">Excellent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="text-align: center;">
+              <td><span>Works to full potantial</span></td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="worksToFullPotantial" formControlName="worksToFullPotantial" id="worksToFullPotantial"
+                    checked value="UNSATISFACTORY">
+                  <label class="form-check-label" for="worksToFullPotantial"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="worksToFullPotantial" formControlName="worksToFullPotantial" id="worksToFullPotantial"
+                    value="SATISFACTORY">
+                  <label class="form-check-label" for="worksToFullPotantial"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="worksToFullPotantial" formControlName="worksToFullPotantial" id="worksToFullPotantial"
+                    value="GOOD">
+                  <label class="form-check-label" for="worksToFullPotantial"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="worksToFullPotantial" formControlName="worksToFullPotantial" id="worksToFullPotantial"
+                    value="EXCELLENT">
+                  <label class="form-check-label" for="worksToFullPotantial"></label>
+                </div>
+              </td>
+            </tr>
+            <tr style="text-align: center;">
+              <td><span>Quality of work</span></td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="qualityOfWork" id="qualityOfWork" checked
+                    value="UNSATISFACTORY" formControlName="qualityOfWork">
+                  <label class="form-check-label" for="qualityOfWork"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="qualityOfWork" id="qualityOfWork"
+                    value="SATISFACTORY" formControlName="qualityOfWork">
+                  <label class="form-check-label" for="qualityOfWork"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="qualityOfWork" id="qualityOfWork" value="GOOD" formControlName="qualityOfWork">
+                  <label class="form-check-label" for="qualityOfWork"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="qualityOfWork" id="qualityOfWork"
+                    value="EXCELLENT" formControlName="qualityOfWork">
+                  <label class="form-check-label" for="qualityOfWork"></label>
+                </div>
+              </td>
+            </tr>
+            <tr style="text-align: center;">
+              <td><span>Work Consistancy</span></td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="workConsistancy" formControlName="workConsistancy" id="workConsistancy" checked
+                    value="UNSATISFACTORY">
+                  <label class="form-check-label" for="workConsistancy"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="workConsistancy" formControlName="workConsistancy" id="workConsistancy"
+                    value="SATISFACTORY">
+                  <label class="form-check-label" for="workConsistancy"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="workConsistancy" formControlName="workConsistancy" id="workConsistancy" value="GOOD">
+                  <label class="form-check-label" for="workConsistancy"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="workConsistancy" formControlName="workConsistancy" id="workConsistancy"
+                    value="EXCELLENT">
+                  <label class="form-check-label" for="workConsistancy"></label>
+                </div>
+              </td>
+            </tr>
+            <tr style="text-align: center;">
+              <td><span>Communication</span></td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="communication" formControlName="communication" id="communication" checked
+                    value="UNSATISFACTORY">
+                  <label class="form-check-label" for="communication"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="communication" formControlName="communication" id="communication"
+                    value="SATISFACTORY">
+                  <label class="form-check-label" for="communication"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="communication" formControlName="communication" id="communication" value="GOOD">
+                  <label class="form-check-label" for="communication"></label>
+                </div>
+              </td>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="communication" formControlName="communication" id="communication"
+                    value="EXCELLENT">
+                  <label class="form-check-label" for="communication"></label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <div class="col-md-12 text-end">
+        <button type="button" class="btn btn-success" (click)="savePerformanceReview()">Save</button>
+      </div>
+    </div>
+  </div>
+
+</div>

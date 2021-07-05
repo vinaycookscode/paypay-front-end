@@ -1,0 +1,115 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <i class="fa fa-chevron-left hover-pointer" (click)="back()"></i>
+      <span style="padding-left: 10px;"> {{ title }} </span>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="employeeForm">
+        <div class="row padding-top-30">
+          <div class="col-md-6">
+            <input type="text" class="text-box" placeholder="Type your full name" formControlName="name">
+            <p class="text-danger error-font-size"
+                *ngIf="( employeeFormControls.name.touched || isFormSubmitted ) && employeeFormControls.name.errors?.required">
+                Full Name is required
+            </p>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="text-box" placeholder="Type your Email" formControlName="email">
+            <p class="text-danger error-font-size"
+                *ngIf="( employeeFormControls.email.touched || isFormSubmitted ) && employeeFormControls.email.errors?.required">
+                Email is required
+            </p>
+          </div>
+        </div>
+        <div class="row padding-top-30">
+          <div class="col-md-6">
+            <input type="text" class="text-box" placeholder="Type your City" formControlName="city">
+            <p class="text-danger error-font-size"
+                *ngIf="( employeeFormControls.city.touched || isFormSubmitted ) && employeeFormControls.city.errors?.required">
+                City is required
+            </p>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="text-box" placeholder="Type your State" formControlName="state">
+            <p class="text-danger error-font-size"
+                *ngIf="( employeeFormControls.state.touched || isFormSubmitted ) && employeeFormControls.state.errors?.required">
+                State is required
+            </p>
+          </div>
+        </div>
+        <div class="row padding-top-30">
+          <div class="col-md-6">
+            <input type="text" class="text-box" placeholder="Type your Address" formControlName="address">
+            <p class="text-danger error-font-size"
+                *ngIf="( employeeFormControls.address.touched || isFormSubmitted ) && employeeFormControls.address.errors?.required">
+                Address is required
+            </p>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="text-box" placeholder="Type your Hobbies" formControlName="hobby">
+            <p class="text-danger error-font-size"
+                *ngIf="( employeeFormControls.hobby.touched || isFormSubmitted ) && employeeFormControls.hobby.errors?.required">
+                Hobby is required
+            </p>
+          </div>
+        </div>
+        <div class="row padding-top-30">
+          <div class="col-md-6">
+            <input type="password" class="text-box" placeholder="Type your Password" formControlName="password"
+            >
+            <p class="text-danger error-font-size"
+                *ngIf="( employeeFormControls.password.touched || isFormSubmitted ) && employeeFormControls.password.errors?.required">
+                Password is required
+            </p>
+          </div>
+        </div>
+        <div class="row padding-top-30">
+          <div class="col-md-6" style="display: flex;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="gender1" checked value="MALE"
+              formControlName="gender"
+              >
+              <label class="form-check-label" for="gender1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="gender2" value="FEMALE"
+              formControlName="gender"
+              >
+              <label class="form-check-label" for="gender2">
+                Female
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6" style="display: flex;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="role1" checked value="USER"
+              formControlName="role"
+              >
+              <label class="form-check-label" for="role1">
+                User
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="role" id="role2" value="ADMIN"
+              formControlName="role"
+              >
+              <label class="form-check-label" for="role2">
+                Admin
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-top-30" style="justify-content: flex-end;">
+          <button type="button" class="btn" style="width: auto;"
+          [ngClass]="{'btn-light': employeeForm.invalid, 'btn-success': !employeeForm.invalid}"
+          [disabled]="employeeForm.invalid"
+          (click)="addEdit()"
+          >{{ buttonTitle }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
